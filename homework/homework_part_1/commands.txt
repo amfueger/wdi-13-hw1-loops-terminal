@@ -1,0 +1,6 @@
+cd salty-sardines/9-10-terminal-loops/wdi-13-hw1-loops-terminal
+mkdir homework
+cd homework
+mkdir homework_part_1
+cd homework_part_1
+touch commants.txt
