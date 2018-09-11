@@ -4,3 +4,158 @@ cd homework
 mkdir homework_part_1
 cd homework_part_1
 touch commants.txt
+
+ mkdir death_star
+ cd death_star/
+ touch darth_vader.txt princess_lei.txt storm_trooper.txt
+ ls
+darth_vader.txt		storm_trooper.txt
+princess_lei.txt
+ cd ..
+ ls
+death_star	homework_part_1
+ mkdir galaxy_far_far_away
+ ls
+death_star		homework_part_1
+galaxy_far_far_away
+ mv death_star/ galaxy_far_far_away/
+ ls
+galaxy_far_far_away	homework_part_1
+ cd galaxy_far_far_away/
+ ls
+death_star
+ mkdir tatooine
+ cd tatooine/
+ touch luke.txt ben_kenobi.txt
+ ls
+ben_kenobi.txt	luke.txt
+ mkdir millenium_falcon
+ cd millenium_falcon/
+ touch han_solo.txt chewbaca.txt
+ ls
+chewbaca.txt	han_solo.txt
+ cd ..
+ ls
+ben_kenobi.txt		millenium_falcon
+luke.txt
+ mv ben_kenobi.txt obi_wan.txt
+ ls
+luke.txt		obi_wan.txt
+millenium_falcon
+ ls
+luke.txt		obi_wan.txt
+millenium_falcon
+ cd ..
+ ls
+death_star	tatooine
+ mv death_star/storm_trooper.txt tatooine/
+ ls
+death_star	tatooine
+ cd tatooine/
+ ls
+luke.txt		obi_wan.txt
+millenium_falcon	storm_trooper.txt
+ cd ..
+ ls
+death_star	tatooine
+ cd death_star/
+ touch storm_trooper.txt
+ ls
+darth_vader.txt		storm_trooper.txt
+princess_lei.txt
+ cd ..
+ ls
+death_star	tatooine
+ cd tatooine/
+ ls
+luke.txt		obi_wan.txt
+millenium_falcon	storm_trooper.txt
+ mv luke.txt millenium_falcon/
+ mv obi_wan.txt millenium_falcon/
+ ls
+millenium_falcon	storm_trooper.txt
+ cd ..
+ ls
+death_star	tatooine
+ mv tatooine/millenium_falcon/ ../galaxy_far_far_away/
+ ls
+death_star		tatooine
+millenium_falcon
+ mv millenium_falcon/ death_star/
+ cd death_star/
+ mv princess_lei.txt millenium_falcon/
+ ls
+darth_vader.txt		storm_trooper.txt
+millenium_falcon
+ cd millenium_falcon/
+ rm obi_wan.txt 
+ ls
+chewbaca.txt		luke.txt
+han_solo.txt		princess_lei.txt
+ cd ..
+ cd ..
+ mkdir yavin_4
+ mv death_star/millenium_falcon/ yavin_4/
+ ls
+death_star	tatooine	yavin_4
+ cd yavin_4/
+ ls
+millenium_falcon
+ mkdir x_wing
+ ls
+millenium_falcon	x_wing
+ cd ..
+ mv yavin_4/millenium_falcon/ 
+usage: mv [-f | -i | -n] [-v] source target
+       mv [-f | -i | -n] [-v] source ... directory
+ mv yavin_4/millenium_falcon/ ../galaxy_far_far_away/
+ mv yavin_4/x_wing ../galaxy_far_far_away/
+ ls
+death_star		x_wing
+millenium_falcon	yavin_4
+tatooine
+ mv millenium_falcon/princess_lei.txt yavin_4/
+ mv millenium_falcon/luke.txt x_wing/
+ ls
+death_star		x_wing
+millenium_falcon	yavin_4
+tatooine
+ cd yavin_4/
+ ls
+princess_lei.txt
+ cd ..
+ cd death_star/
+ mkdir tie_fighter_1 tie_fighter_2 tie_fighter_3
+ ls
+darth_vader.txt		tie_fighter_2
+storm_trooper.txt	tie_fighter_3
+tie_fighter_1
+ mv darth_vader.txt tie_fighter_1
+ ls
+storm_trooper.txt	tie_fighter_2
+tie_fighter_1		tie_fighter_3
+ cd ..
+ mv death_star/tie_fighter_1 ../galaxy_far_far_away/
+ mv death_star/tie_fighter_2 ../galaxy_far_far_away/
+ mv death_star/tie_fighter_3 ../galaxy_far_far_away/
+ ls
+death_star		tie_fighter_2
+millenium_falcon	tie_fighter_3
+tatooine		x_wing
+tie_fighter_1		yavin_4
+ rm tie_fighter_2
+rm: tie_fighter_2: is a directory
+ rm -r tie_fighter_2
+ rm -r tie_fighter_3
+ ls
+death_star		tie_fighter_1
+millenium_falcon	x_wing
+tatooine		yavin_4
+ ls
+death_star		tie_fighter_1
+millenium_falcon	x_wing
+tatooine		yavin_4
+ touch x_wing/the_force.txt
+ rm -r death_star/
+ mv x_wing/ yavin_4/
+ mv millenium_falcon/ yavin_4/
